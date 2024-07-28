@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "56bf4bce-c50f-4470-9986-a9c2c7f0012e",
+		"name": "ITL_FMS_SMART_WEP_APP_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29508073",
+		"_collection_link": "https://speeding-resonance-716623.postman.co/workspace/API_AUTOMATION_2025~f1cf5e56-60ec-45af-9dfd-a09579f084fe/collection/29508073-56bf4bce-c50f-4470-9986-a9c2c7f0012e?action=share&source=collection_link&creator=29508073"
+	},
+	"item": [
+		{
+			"name": "API_01_UserAuthentication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://fmssmart.tmsitrimble.in/FMSSmart/login/post/json/userAuthentication",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"applicationId\": 1,\r\n    \"userName\": \"202067\",\r\n    \"password\": \"Kosa@1960\",\r\n    \"serverName\": \"ITL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fmssmart.tmsitrimble.in/FMSSmart/login/post/json/userAuthentication",
+					"protocol": "https",
+					"host": [
+						"fmssmart",
+						"tmsitrimble",
+						"in"
+					],
+					"path": [
+						"FMSSmart",
+						"login",
+						"post",
+						"json",
+						"userAuthentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_02_MenuMapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":10138}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fmssmart.tmsitrimble.in/FMSSmart/admin/post/json/getUserMenuMapping",
+					"protocol": "https",
+					"host": [
+						"fmssmart",
+						"tmsitrimble",
+						"in"
+					],
+					"path": [
+						"FMSSmart",
+						"admin",
+						"post",
+						"json",
+						"getUserMenuMapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_03_Vehicle_List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":10138}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/masters/post/json/getUserVehicles",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"masters",
+						"post",
+						"json",
+						"getUserVehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_04_getTransporterSafetyViolationDashbaordCounts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":10138,\"fromDate\":\"2024-07-17\",\"toDate\":\"2024-07-17\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/dashboard/post/json/getTransporterSafetyViolationDashbaordCounts",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"dashboard",
+						"post",
+						"json",
+						"getTransporterSafetyViolationDashbaordCounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_05_GetDriversDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":10138}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/masters/post/json/getDriverDetails",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"masters",
+						"post",
+						"json",
+						"getDriverDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_06_SafetySummaryReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleGroupId\":[],\"vehicleId\":[238394],\"fDate\":\"2024-07-01 00:00:00\",\"tDate\":\"2024-07-16 23:59:59\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getSafetySummaryReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getSafetySummaryReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_07_StoppageReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleId\":[238394],\"vehicleGroupId\":[],\"referenceId\":[],\"fDate\":\"2024-07-01 15:59:56\",\"tDate\":\"2024-07-17 15:59:56\",\"stoppageDuration\":10}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getStoppageReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getStoppageReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_08_TrackingReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"vehicleId\":[238394],\"fDate\":\"2024-07-17 00:00:00\",\"tDate\":\"2024-07-17 16:04:06\",\"uId\":10138,\"interval\":15}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getTrackingReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getTrackingReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_09_SpeedBasedOverspeedReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleId\":[238394],\"fDate\":\"2024-07-01 00:00:00\",\"vehicleGroupId\":[],\"tDate\":\"2024-07-17 16:05:55\",\"speedLimit\":50}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getSpeedBasedOverspeedReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getSpeedBasedOverspeedReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_10_DeviceTriggeredOverspeedReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleId\":[238394],\"fDate\":\"2024-07-02 00:00:00\",\"tDate\":\"2024-07-17 16:10:08\",\"vehicleGroupId\":[]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getDeviceTriggeredOverspeedReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getDeviceTriggeredOverspeedReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_11_DaywiseDistanceReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleId\":[238394],\"vehicleGroupId\":[],\"fDate\":\"2024-07-01 00:00:00\",\"tDate\":\"2024-07-17 00:00:00\",\"fTime\":\"00:00:00\",\"tTime\":\"23:59:59\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getDaywiseDistanceReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getDaywiseDistanceReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_12_DistanceViewReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleId\":[238394],\"vehicleGroupId\":[],\"fDate\":\"2024-07-03 00:00:00\",\"tDate\":\"2024-07-17 16:18:48\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getDistanceViewReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getDistanceViewReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_13_ExceptionReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleId\":[238394],\"fDate\":\"2024-07-03 00:00:00\",\"tDate\":\"2024-07-17 23:59:59\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getExceptionReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getExceptionReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_14_NightDriveSummaryReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uId\":10138,\"vehicleId\":[238394],\"vehicleGroupId\":[],\"fDate\":\"2024-07-03 00:00:00\",\"tDate\":\"2024-07-17 23:59:59\",\"instance\":0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ITL_FMS_SMART_APP}}/report/post/json/getNightDriveSummaryReport",
+					"host": [
+						"{{ITL_FMS_SMART_APP}}"
+					],
+					"path": [
+						"report",
+						"post",
+						"json",
+						"getNightDriveSummaryReport"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
